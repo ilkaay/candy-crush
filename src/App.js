@@ -142,6 +142,9 @@ const App = () => {
   };
 
   const dragEnd = (e) => {
+    if (!squareBeingDragged || !squareBeingReplaced) {
+      return;
+    }
     const squareBeingDraggedId = parseInt(
       squareBeingDragged.getAttribute("data-id")
     );
